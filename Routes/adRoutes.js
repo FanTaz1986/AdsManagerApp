@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-// const { createAd, getAds, getAdById, updateAd, deleteAd } = require('../controllers/adController');
 
 const {
     createAd,

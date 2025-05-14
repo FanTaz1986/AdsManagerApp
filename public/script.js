@@ -572,7 +572,7 @@ editProfileBtn.addEventListener('click', async () => {
       saveBtn.textContent = 'Save';
       modal.appendChild(saveBtn);
 
-      // Message area for profile edit (directly under Save button)
+      // Message area for profile edit
       const profileMsgDiv = document.createElement('div');
       profileMsgDiv.id = 'profile-message';
       profileMsgDiv.className = 'form-message';

@@ -145,7 +145,7 @@ th {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
   background: rgba(0,0,0,0.3);
-  display: none; /* Hide modal by default */
+  display: none; 
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -258,7 +258,6 @@ th {
   font-size: 1.1rem;
 }
 
-/* Move inline styles from HTML to CSS */
 #adSearchBar {
   max-width: 600px;
   margin: 0 auto 10px auto;
