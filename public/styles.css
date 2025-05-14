@@ -1,0 +1,288 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+h1, h2, h3 {
+  text-align: center;
+  color: #333;
+}
+.auth-forms {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.auth-forms form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  max-width: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 0;
+}
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 6px;
+  max-width: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+input, button, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background: #0d47a1;
+}
+#message {
+  text-align: center;
+  margin: 10px 0;
+  color: #388e3c;
+  font-weight: bold;
+  min-height: 0;
+  z-index: 10000;
+  position: relative;
+  background: transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  pointer-events: auto;
+  transition: background 0.2s;
+  font-size: 1.1em;
+  display: none;
+}
+#message.active {
+  display: block;
+  background: #fffbe7;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.form-message {
+  text-align: left;
+  margin: 8px 0 0 0;
+  color: #388e3c;
+  font-weight: bold;
+  min-height: 0;
+  font-size: 1em;
+  background: transparent;
+  border-radius: 3px;
+  padding-left: 2px;
+  display: none;
+  transition: background 0.2s;
+}
+.form-message.active {
+  display: block;
+  background: #fffbe7;
+}
+.form-message.error {
+  color: #b71c1c;
+  background: #ffeaea;
+}
+.form-message.active {
+  display: block;
+  background: #fffbe7;
+}
+.form-message.error {
+  color: #b71c1c;
+  background: #ffeaea;
+}
+#user-message {
+  margin-bottom: 8px;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin: 0 auto;
+  max-width: 700px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background: #f2f2f2;
+}
+.edit-btn, .delete-btn, .recover-btn, .clear-btn {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.clear-btn {
+  background: #b71c1c;
+  color: #fff;
+}
+.recover-btn {
+  background: #ff9800;
+  color: #fff;
+}
+.edit-btn {
+  background: #2196F3;
+  color: #fff;
+}
+.delete-btn {
+  background: #f44336;
+  color: #fff;
+}
+
+/* Modal overlay */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.3);
+  display: none; /* Hide modal by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.custom-modal-overlay.active {
+  display: flex;
+}
+.custom-modal-box {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  min-width: 260px;
+  pointer-events: all;
+}
+.custom-modal-btn {
+  padding: 6px 18px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.custom-modal-btn.save { background: #2196F3; }
+.custom-modal-btn.cancel { background: #1976d2; }
+.custom-modal-btn.delete { background: #f44336; }
+
+/* Layout for admin split view */
+.left-panel {
+  float: left;
+  width: 60%;
+  margin-right: 2%;
+}
+.right-panel {
+  float: right;
+  width: 36%;
+  margin-left: 2%;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive: stack panels on small screens */
+@media (max-width: 900px) {
+  .left-panel, .right-panel {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+#ad-section {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+#adForm textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+/* Ads Table */
+.ads-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin: 10px 0;
+  max-width: 700px;
+}
+.ads-table th, .ads-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.ads-table th {
+  background: #f2f2f2;
+}
+#user-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+#welcomeMsg {
+  font-weight: bold;
+  color: #1976d2;
+  font-size: 2rem;
+  margin-right: 20px;
+  text-align: center;
+}
+#editProfileBtn, #logoutBtn {
+  width: auto;
+  margin-left: 15px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+}
+
+/* Move inline styles from HTML to CSS */
+#adSearchBar {
+  max-width: 600px;
+  margin: 0 auto 10px auto;
+  display: flex;
+  gap: 10px;
+}
+#adSearchBar input[type="text"] {
+  flex: 2;
+  padding: 8px;
+}
+#adSearchBar input[type="number"] {
+  flex: 1;
+  padding: 8px;
+}
+#userSearchInput {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+#admin-section {
+}
+#user-bar {
+}
+#adsActionsHeader {
+}
+#modalOverlay {
+}
